@@ -21,7 +21,9 @@
   --ink-soft: #4C5F52;  /* body copy */
   --brass:    #9C7A2E;  /* accent (slightly deepened for text contrast) */
   --brass-lt: #D9C089;  /* accent on dark backgrounds */
-  --kokum:    #6B2737;  /* kokum-fruit red, used sparingly */
+  --kokum:    #6B2737;  /* kokum-fruit red: ingredient accents */
+  --action:   #8A2F43;  /* buttons people click (kokum, a shade brighter) */
+  --action-2: #6E2233;  /* button hover */
   --line:     rgba(156,122,46,0.35);
 
   /* Type */
@@ -81,8 +83,9 @@ img{ max-width:100%; display:block; }
   text-decoration:none; cursor:pointer; border:1px solid transparent;
   transition:background .2s, color .2s, border-color .2s;
 }
-.btn-primary{ background:var(--forest); color:var(--cream); }
-.btn-primary:hover{ background:var(--forest-2); }
+.btn-primary{ background:var(--action); color:var(--cream); }
+.btn-primary:hover{ background:var(--action-2); }
+.band-forest .btn-primary{ box-shadow:0 0 0 1px var(--brass-lt); }
 .btn-ghost{ border-color:var(--ink); color:var(--ink); background:transparent; }
 .btn-ghost:hover{ background:var(--ink); color:var(--cream); }
 .btn-brass{ background:var(--brass-lt); color:var(--forest-2); }
@@ -182,6 +185,7 @@ img{ max-width:100%; display:block; }
 .origin .deva{ font-family:var(--deva); font-size:clamp(2.6rem,5vw,3.6rem); line-height:1.1; color:var(--kokum); }
 .origin.cinnamon .deva{ color:var(--brass); }
 .origin h3{ font-size:1.6rem; margin-top:.4rem; }
+.origin h3 .english{ font-size:.62em; font-style:normal; color:var(--ink-soft); }
 .origin .where{ font-size:.75rem; letter-spacing:.14em; text-transform:uppercase; font-weight:600; color:var(--ink); margin-top:.3rem; }
 .origin p{ margin-top:.9rem; max-width:32rem; }
 @media (max-width: 44rem){ .origins{ grid-template-columns:1fr; } }
