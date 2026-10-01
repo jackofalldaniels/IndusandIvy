@@ -1,0 +1,78 @@
+/* ==========================================================================
+   INDUS & IVY — site chrome: announcement bar, header and footer.
+   Used by EVERY page, so the tabs and footer are identical everywhere.
+
+   All classes start with "ii-" and the colours are set on the elements
+   themselves, so this file works the same on new and old pages.
+   ========================================================================== */
+
+.ii-announce,.ii-header,.ii-footer{
+  --ii-cream:#FAF4E8; --ii-forest:#17362A; --ii-forest-2:#0F2A20; --ii-ink:#1E3428;
+  --ii-brass:#9C7A2E; --ii-brass-lt:#D9C089; --ii-action:#8A2F43; --ii-action-2:#6E2233;
+  --ii-line:rgba(156,122,46,0.35);
+  --ii-body:"Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --ii-gutter:clamp(1rem, 4.5vw, 4rem);
+  font-family:var(--ii-body); line-height:1.6; box-sizing:border-box;
+}
+.ii-announce *,.ii-header *,.ii-footer *{ box-sizing:border-box; }
+.ii-inner{ max-width:72rem; margin:0 auto; padding-inline:var(--ii-gutter); }
+
+/* ---------- announcement bar ---------- */
+.ii-announce{
+  background:var(--ii-forest); color:var(--ii-cream);
+  font-size:0.8rem; letter-spacing:0.04em; text-align:center;
+  padding:0.55rem var(--ii-gutter); margin:0;
+}
+.ii-announce a{ color:var(--ii-brass-lt); text-underline-offset:3px; }
+
+/* ---------- header ---------- */
+.ii-header{
+  position:sticky; top:0; z-index:50;
+  background:rgba(250,244,232,0.96); backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--ii-line); margin:0;
+}
+.ii-header .ii-inner{ display:flex; align-items:center; justify-content:space-between; gap:1rem; min-height:4.5rem; position:relative; }
+.ii-brand{ display:flex; align-items:center; gap:.7rem; text-decoration:none; }
+.ii-brand img{ display:block; height:auto; max-width:none; }
+.ii-brand-mark{ width:4.6rem; }
+.ii-brand-word{ width:11.5rem; }
+
+.ii-nav{ display:flex; align-items:center; gap:clamp(1rem,2.4vw,2rem); margin:0; padding:0; }
+.ii-nav a{
+  font:500 0.86rem/1.4 var(--ii-body); letter-spacing:0; text-transform:none;
+  text-decoration:none; color:var(--ii-ink); padding-block:.4rem;
+  border-bottom:1px solid transparent; background:none;
+}
+.ii-nav a:hover,.ii-nav a[aria-current="page"]{ border-bottom-color:var(--ii-brass); }
+.ii-nav a.ii-cta{
+  display:inline-flex; align-items:center; min-height:2.5rem; padding:0 1rem; border-radius:4px;
+  background:var(--ii-action); color:var(--ii-cream); border:0;
+  font:600 0.8rem/1 var(--ii-body); letter-spacing:.08em; text-transform:uppercase;
+}
+.ii-nav a.ii-cta:hover{ background:var(--ii-action-2); }
+.ii-header a:focus-visible,.ii-header button:focus-visible,.ii-footer a:focus-visible{ outline:2px solid var(--ii-brass); outline-offset:3px; }
+
+.ii-menu{ display:none; background:none; border:1px solid var(--ii-line); border-radius:4px; padding:.5rem .7rem; font:600 .75rem var(--ii-body); letter-spacing:.1em; text-transform:uppercase; color:var(--ii-ink); cursor:pointer; }
+@media (max-width: 52rem){
+  .ii-menu{ display:block; }
+  .ii-nav{ display:none; position:absolute; left:0; right:0; top:100%; flex-direction:column; align-items:stretch; gap:0; background:var(--ii-cream); border-bottom:1px solid var(--ii-line); padding:.5rem var(--ii-gutter) 1rem; }
+  .ii-nav.is-open{ display:flex; }
+  .ii-nav a{ padding-block:.8rem; border-bottom:1px solid var(--ii-line); }
+  .ii-nav a.ii-cta{ margin-top:.8rem; justify-content:center; min-height:2.9rem; }
+  .ii-brand-word{ width:8.5rem; }
+  .ii-brand-mark{ width:3.8rem; }
+}
+
+/* ---------- footer ---------- */
+.ii-footer{ background:var(--ii-forest-2); color:rgba(250,244,232,.8); padding-block:3.5rem 2rem; font-size:.88rem; margin:0; }
+.ii-footer-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr 1.3fr; gap:2rem; }
+.ii-footer img{ display:block; width:10rem; height:auto; }
+.ii-footer p{ margin:1rem 0 0; max-width:18rem; color:inherit; font-size:inherit; }
+.ii-footer h3{ font:600 .72rem/1.4 var(--ii-body); letter-spacing:.16em; text-transform:uppercase; color:var(--ii-brass-lt); margin:0 0 .8rem; }
+.ii-footer ul{ list-style:none; margin:0; padding:0; display:grid; gap:.45rem; }
+.ii-footer li{ margin:0; }
+.ii-footer a{ color:inherit; text-decoration:none; }
+.ii-footer a:hover{ color:var(--ii-cream); text-decoration:underline; }
+.ii-legal{ margin-top:2.5rem; padding-top:1.25rem; border-top:1px solid rgba(217,192,137,.25); display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem; font-size:.78rem; }
+@media (max-width: 52rem){ .ii-footer-grid{ grid-template-columns:1fr 1fr; } }
+@media (max-width: 30rem){ .ii-footer-grid{ grid-template-columns:1fr; } }

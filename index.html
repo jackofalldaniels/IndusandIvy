@@ -11,6 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Sans:wght@400;500;600&family=Noto+Serif+Devanagari:wght@400;500&display=swap">
 <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/chrome.css">
 <!-- Structured data: helps Google and AI assistants describe the brand correctly -->
 <script type="application/ld+json">
 {
@@ -25,28 +26,26 @@
 </head>
 <body>
 
-<!-- ============ ANNOUNCEMENT BAR (edit the text on launch day) ============ -->
-<div class="announce">
-  Launching soon on Amazon US. <a href="#join">Get launch-day access</a>
-</div>
-
-<!-- ============ HEADER (same on every page) ============ -->
-<header class="site-header">
-  <div class="wrap">
-    <a class="brand" href="index.html" aria-label="Indus &amp; Ivy home">
-      <img class="brand-mark" src="assets/emblem.png" alt="" width="80" height="33">
-      <img class="brand-word" src="assets/wordmark.png" alt="Indus &amp; Ivy" width="190" height="18">
+<!-- ===== HEADER: edit partials/header.html, then run tools/update-chrome.py ===== -->
+<!-- II:HEADER -->
+<div class="ii-announce">Launching soon on Amazon US. <a href="index.html#join">Get launch-day access</a></div>
+<header class="ii-header">
+  <div class="ii-inner">
+    <a class="ii-brand" href="index.html" aria-label="Indus &amp; Ivy home">
+      <img class="ii-brand-mark" src="assets/emblem.png" alt="" width="80" height="33">
+      <img class="ii-brand-word" src="assets/wordmark.png" alt="Indus &amp; Ivy" width="190" height="18">
     </a>
-    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-    <nav class="nav" id="site-nav" aria-label="Main">
+    <button class="ii-menu" id="ii-menu" aria-expanded="false" aria-controls="ii-nav">Menu</button>
+    <nav class="ii-nav" id="ii-nav" aria-label="Main">
       <a href="index.html" aria-current="page">Home</a>
       <a href="products.html">Our Products</a>
       <a href="story.html">Our Story</a>
       <a href="contact.html">Contact Us</a>
-      <a class="btn btn-primary" href="#join">Join the list</a>
+      <a class="ii-cta" href="index.html#join">Join the list</a>
     </nav>
   </div>
 </header>
+<!-- /II:HEADER -->
 
 <main>
 
@@ -196,13 +195,14 @@
 
 </main>
 
-<!-- ============ FOOTER (same on every page) ============ -->
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-grid">
+<!-- ===== FOOTER: edit partials/footer.html, then run tools/update-chrome.py ===== -->
+<!-- II:FOOTER -->
+<footer class="ii-footer">
+  <div class="ii-inner">
+    <div class="ii-footer-grid">
       <div>
         <img src="assets/logo-light.png" alt="Indus &amp; Ivy" width="160" height="102">
-        <p style="margin-top:1rem;max-width:18rem">Body care built around traceable ingredients from India.</p>
+        <p>Body care built around traceable ingredients from India.</p>
       </div>
       <div>
         <h3>Shop</h3>
@@ -225,17 +225,19 @@
         <ul>
           <li>getintouch@indusandivy.com</li>
           <li>Indus and Ivy, LLC<br>Dallas, Texas 75204</li>
-          <li><a href="#join">Join the list</a></li>
+          <li><a href="index.html#join">Join the list</a></li>
         </ul>
       </div>
     </div>
-    <div class="legal">
+    <div class="ii-legal">
       <span>© 2026 Indus and Ivy, LLC. Made in India.</span>
       <span>Not tested on animals. Contains beeswax.</span>
     </div>
   </div>
 </footer>
+<!-- /II:FOOTER -->
 
 <script src="js/site.js"></script>
+<script src="js/chrome.js"></script>
 </body>
 </html>
