@@ -1,0 +1,4 @@
+# Netlify settings. The site is plain HTML/CSS, so there is no build step.
+[build]
+  publish = "."
+  command = ""

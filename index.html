@@ -1,535 +1,239 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Indus &amp; Ivy — India-origin botanicals for body care</title>
-<meta name="description" content="Kokum butter from the Konkan coast. Coffee from the hills above Coorg. India-origin botanicals, made properly.">
-<meta property="og:title" content="Indus &amp; Ivy">
-<meta property="og:description" content="You grew up with half of this.">
-<meta property="og:type" content="website">
-<link rel="icon" href="mark.png">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Indus &amp; Ivy | Kokum Butter Balm for Dry, Cracked Heels</title>
+<meta name="description" content="Kokum Butter Balm, infused with Cinnamon, for Heels, Elbows &amp; Knees. Five ingredients, made in India. Launching soon on Amazon US.">
+<link rel="icon" href="assets/mark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Sans:wght@400;500;600&family=Noto+Serif+Devanagari:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Sans:wght@400;500;600&family=Noto+Serif+Devanagari:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+<!-- Structured data: helps Google and AI assistants describe the brand correctly -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Indus and Ivy, LLC",
+  "url": "https://indusandivy.com",
+  "logo": "https://indusandivy.com/assets/logo.png",
+  "email": "getintouch@indusandivy.com"
+}
+</script>
 </head>
 <body>
 
-<!-- ============ announcement ============ -->
-<!-- SWAP: shipping offer once fulfilment is decided -->
-<div class="announce">India-origin botanicals &nbsp;&middot;&nbsp; Made properly &nbsp;&middot;&nbsp; Launching soon on Amazon US</div>
+<!-- ============ ANNOUNCEMENT BAR (edit the text on launch day) ============ -->
+<div class="announce">
+  Launching soon on Amazon US. <a href="#join">Get launch-day access</a>
+</div>
 
-<!-- ============ nav ============ -->
-<header class="nav">
-  <nav class="nav-links">
-    <a href="products.html">Shop</a>
-    <a href="story.html">Our story</a>
-    <a href="products.html#materials">Ingredients</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-  <a class="brandmark" href="index.html">
-    <img src="logo.png" alt="Indus &amp; Ivy" width="200">
-  </a>
-  <div class="nav-utils" aria-hidden="true">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c1.3-4 4-6 7.5-6s6.2 2 7.5 6"/></svg>
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 8h14l-1.2 12H6.2L5 8z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg>
+<!-- ============ HEADER (same on every page) ============ -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Indus &amp; Ivy home">
+      <img src="assets/mark.png" alt="" width="52" height="42">
+      <span>INDUS <b>&amp;</b> IVY</span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="products.html">Our Products</a>
+      <a href="story.html">Our Story</a>
+      <a href="contact.html">Contact Us</a>
+      <a class="btn btn-primary" href="#join">Join the list</a>
+    </nav>
   </div>
 </header>
 
-<!-- ============ hero ============ -->
+<main>
+
+<!-- ============ 1. HERO ============ -->
 <section class="hero">
-  <div class="hero-grid">
-
+  <div class="wrap">
     <div>
-      <p class="eyebrow">India-origin botanicals</p>
-      <h1>You grew up with <em>half of this.</em></h1>
-      <p class="lede">
-        Kokum butter from the Konkan coast. Coffee from the hills above Coorg.
-        The things that were always somewhere in the house, made properly for
-        the shelf you have now.
-      </p>
-      <a class="btn" href="products.html">Shop the launch collection</a>
+      <p class="eyebrow">Body care from India's botanicals</p>
+      <h1>One Indian botanical. One job. <em>Done well.</em></h1>
+      <p class="lede">Body care built around single, traceable ingredients from India, with short ingredient lists and nothing to hide. Our first: a kokum butter balm for dry, cracked heels.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#join">Get launch-day access</a>
+        <a class="btn btn-ghost" href="#origins">Meet the ingredients</a>
+      </div>
+      <p class="hero-note">Launching soon on Amazon US.</p>
+    </div>
 
-      <div class="trust">
+    <!-- The full ingredient list, shown up front. Order = label order (heaviest first). -->
+    <aside class="label" aria-labelledby="label-title">
+      <div class="label-head">
         <div>
-          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M16 28c0-8 4-13 11-14-1 8-5 12-11 14z"/><path d="M16 28c0-7-3.4-11-9.5-12C7.4 23 11 26.5 16 28z"/><path d="M16 28v-6"/></svg>
-          <span>India-origin<br>botanicals</span>
+          <h2 id="label-title">Everything in the jar</h2>
+          <p class="label-sub">Kokum Butter Balm · 1.76 oz / 50 g</p>
         </div>
-        <div>
-          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M13 4h6M14 4v8l-6 12a2.5 2.5 0 002.2 3.6h11.6A2.5 2.5 0 0030 24l-6-12V4"/><path d="M10 20h12"/></svg>
-          <span>Thoughtful<br>formulations</span>
-        </div>
-        <div>
-          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M16 27S5 20.5 5 13.2A6 6 0 0116 10a6 6 0 0111 3.2C27 20.5 16 27 16 27z"/></svg>
-          <span>Made for<br>real life</span>
-        </div>
+        <span class="eyebrow">5 ingredients</span>
+      </div>
+      <ol class="inci">
+        <li><span class="n">1</span><span class="name">Rice Bran Oil <span class="latin">Oryza Sativa (Rice) Bran Oil</span></span><span class="role">A light oil that sinks in. The base of the balm.</span></li>
+        <li><span class="n">2</span><span class="name">Caprylic/Capric Triglyceride <span class="latin">from coconut</span></span><span class="role">Helps the balm glide on without a greasy feel.</span></li>
+        <li><span class="n">3</span><span class="name">Beeswax <span class="latin">Cera Alba</span></span><span class="role">Keeps it solid in the jar and in place on skin.</span></li>
+        <li class="hero-ing"><span class="n">4</span><span class="name">Kokum Butter <span class="latin">Garcinia Indica Seed Butter</span></span><span class="role">From India's Konkan coast. Softens and conditions dry, rough skin.</span></li>
+        <li><span class="n">5</span><span class="name">Cinnamon Leaf Oil <span class="latin">Cinnamomum Zeylanicum Leaf Oil</span></span><span class="role">A warm scent, used at a low level.</span></li>
+      </ol>
+      <div class="label-foot">
+        <span>No water</span><span>No preservatives</span><span>No synthetic fragrance</span>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ 2. FEATURED PRODUCT ============ -->
+<section class="section band-sand" id="product">
+  <div class="wrap product">
+    <div class="product-visual">
+      <!-- PLACEHOLDER: AI-generated in Canva (media id MAHWyCueK2c). Replace with a real product photo before launch.
+           Keep the same file name, or update src below. -->
+      <img src="assets/kokum-butter-balm-50g-jar-placeholder.jpg" alt="Kokum Butter Balm jar, open, with kokum fruit and cinnamon sticks" width="600" height="600" loading="lazy">
+    </div>
+    <div>
+      <p class="eyebrow">Our first product</p>
+      <h2>Kokum Butter Balm <span class="for">infused with Cinnamon, for Heels, Elbows &amp; Knees</span></h2>
+      <p>A solid balm that melts on contact and stays where you put it. Smooth a little over dry, cracked heels at night, then let it work while you sleep. Expect softer, smoother skin with steady use over a few weeks.</p>
+      <p>There's no water in it, so every scoop is pure butter and oil. You need far less than you would of a cream, and a small jar goes a long way.</p>
+      <dl class="facts">
+        <div><dt>Size</dt><dd>50 g<small>1.76 oz</small></dd></div>
+        <div><dt>Per use</dt><dd>A fingertip<small>a thin layer is enough</small></dd></div>
+        <div><dt>Price</dt><dd>$15<small>on Amazon US</small></dd></div>
+      </dl>
+      <div class="product-actions">
+        <a class="btn btn-primary" href="products.html">See the details</a>
+        <span class="status">Launching soon on Amazon</span>
       </div>
     </div>
-
-    <!-- Product illustration. SWAP: replace this whole <svg> with
-         <img src="images/hero.jpg" alt="..."> once photography exists. -->
-    <div class="hero-art">
-      <svg viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kokum balm and coffee salt scrub jars">
-        <defs>
-          <linearGradient id="glass" x1="0" y1="0" x2="1" y2="0.4">
-            <stop offset="0" stop-color="#6E4420"/><stop offset=".3" stop-color="#A8722F"/>
-            <stop offset=".55" stop-color="#8A5A26"/><stop offset="1" stop-color="#5C3618"/>
-          </linearGradient>
-          <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0" stop-color="#8A6C2A"/><stop offset=".3" stop-color="#E3C98A"/>
-            <stop offset=".6" stop-color="#B08D3F"/><stop offset="1" stop-color="#7E621F"/>
-          </linearGradient>
-          <linearGradient id="darklid" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0" stop-color="#221610"/><stop offset=".35" stop-color="#4A3324"/>
-            <stop offset=".7" stop-color="#2C1D14"/><stop offset="1" stop-color="#1A110B"/>
-          </linearGradient>
-          <linearGradient id="stone" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#EFE4CE"/><stop offset="1" stop-color="#D9C9AC"/>
-          </linearGradient>
-          <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#2E5C3C"/><stop offset="1" stop-color="#17362A"/>
-          </linearGradient>
-        </defs>
-
-        <!-- leaves behind -->
-        <g fill="url(#leaf)" opacity=".9">
-          <path d="M596 66c26 22 30 58 8 84-24-20-30-56-8-84z"/>
-          <path d="M604 150c30 14 42 48 26 78-28-12-42-46-26-78z"/>
-          <path d="M556 118c28 6 46 34 40 64-28-4-48-32-40-64z"/>
-        </g>
-
-        <!-- stone slab -->
-        <rect x="150" y="252" width="330" height="86" rx="8" fill="url(#stone)"/>
-        <rect x="150" y="252" width="330" height="12" rx="6" fill="#F6EEDC"/>
-
-        <!-- BALM JAR, on the slab -->
-        <g>
-          <ellipse cx="298" cy="256" rx="86" ry="11" fill="#17362A" opacity=".14"/>
-          <rect x="222" y="120" width="152" height="136" rx="10" fill="url(#glass)"/>
-          <rect x="236" y="128" width="18" height="120" rx="9" fill="#fff" opacity=".16"/>
-          <rect x="216" y="88" width="164" height="36" rx="6" fill="url(#gold)"/>
-          <rect x="216" y="118" width="164" height="7" rx="3" fill="#6E5518" opacity=".55"/>
-          <rect x="236" y="142" width="124" height="94" rx="2" fill="#FAF4E8"/>
-          <image href="logo.png" x="262" y="150" width="72" height="46" preserveAspectRatio="xMidYMid meet"/>
-          <text x="298" y="208" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="9.5" letter-spacing="1.4" fill="#1E3428">KOKUM BUTTER</text>
-          <text x="298" y="219" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="9.5" letter-spacing="1.4" fill="#1E3428">ELBOW &amp; HEEL BALM</text>
-          <text x="298" y="231" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="6.5" letter-spacing="1" fill="#B08D3F">3.5 OZ | 100 g</text>
-        </g>
-
-        <!-- SCRUB JAR, in front -->
-        <g>
-          <ellipse cx="432" cy="424" rx="98" ry="13" fill="#17362A" opacity=".16"/>
-          <rect x="344" y="286" width="176" height="138" rx="10" fill="url(#glass)"/>
-          <rect x="360" y="294" width="20" height="122" rx="10" fill="#fff" opacity=".14"/>
-          <rect x="336" y="250" width="192" height="40" rx="6" fill="url(#darklid)"/>
-          <!-- coffee grounds mounded on the lid -->
-          <g fill="#3A2416">
-            <ellipse cx="380" cy="252" rx="14" ry="8"/><ellipse cx="412" cy="247" rx="16" ry="9"/>
-            <ellipse cx="448" cy="250" rx="15" ry="8"/><ellipse cx="480" cy="254" rx="13" ry="7"/>
-            <ellipse cx="396" cy="244" rx="11" ry="6"/><ellipse cx="464" cy="243" rx="12" ry="6"/>
-          </g>
-          <g fill="#FAF4E8" opacity=".85">
-            <circle cx="392" cy="250" r="2.6"/><circle cx="436" cy="245" r="2.2"/><circle cx="470" cy="252" r="2.4"/>
-          </g>
-          <rect x="360" y="312" width="144" height="94" rx="2" fill="#FAF4E8"/>
-          <image href="logo.png" x="396" y="320" width="72" height="46" preserveAspectRatio="xMidYMid meet"/>
-          <text x="432" y="384" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="10" letter-spacing="1.5" fill="#1E3428">COFFEE &amp; SALT SCRUB</text>
-          <text x="432" y="396" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="6.5" letter-spacing="1" fill="#B08D3F">8.8 OZ | 250 g</text>
-        </g>
-
-        <!-- kokum fruit -->
-        <g>
-          <circle cx="196" cy="326" r="30" fill="#5E1F2C"/>
-          <circle cx="188" cy="316" r="9" fill="#8A3444" opacity=".55"/>
-          <path d="M196 296c4-10 14-14 22-12-4 10-13 14-22 12z" fill="url(#leaf)"/>
-          <circle cx="246" cy="352" r="24" fill="#4E1824"/>
-          <circle cx="240" cy="344" r="7" fill="#7E2C3C" opacity=".5"/>
-          <circle cx="152" cy="356" r="26" fill="#5E1F2C"/>
-          <circle cx="152" cy="356" r="17" fill="#F3EBDA"/>
-          <g fill="#E4D6BA">
-            <ellipse cx="146" cy="350" rx="6" ry="7"/><ellipse cx="158" cy="350" rx="6" ry="7"/>
-            <ellipse cx="146" cy="362" rx="6" ry="7"/><ellipse cx="158" cy="362" rx="6" ry="7"/>
-          </g>
-        </g>
-
-        <!-- coffee beans + salt -->
-        <g fill="#38220F">
-          <g transform="translate(548 400) rotate(18)"><ellipse rx="15" ry="10"/><path d="M-15 0a15 6 0 0030 0a15 6 0 00-30 0" fill="#5A3A1C"/></g>
-          <g transform="translate(586 372) rotate(-24)"><ellipse rx="14" ry="9"/><path d="M-14 0a14 5 0 0028 0a14 5 0 00-28 0" fill="#5A3A1C"/></g>
-          <g transform="translate(556 440) rotate(6)"><ellipse rx="15" ry="10"/><path d="M-15 0a15 6 0 0030 0a15 6 0 00-30 0" fill="#5A3A1C"/></g>
-          <g transform="translate(304 432) rotate(-12)"><ellipse rx="13" ry="9"/><path d="M-13 0a13 5 0 0026 0a13 5 0 00-26 0" fill="#5A3A1C"/></g>
-        </g>
-        <g fill="#FFFDF6">
-          <rect x="268" y="404" width="11" height="9" rx="2" transform="rotate(-14 273 408)"/>
-          <rect x="292" y="398" width="8" height="7" rx="2" transform="rotate(22 296 401)"/>
-          <rect x="524" y="428" width="10" height="8" rx="2" transform="rotate(10 529 432)"/>
-          <rect x="596" y="418" width="9" height="8" rx="2" transform="rotate(-20 600 422)"/>
-        </g>
-      </svg>
-    </div>
-
   </div>
 </section>
 
-<!-- ============ promise ============ -->
-<section class="band band--forest">
-  <div class="promise-grid">
-    <div>
-      <p class="eyebrow eyebrow--light">Our promise</p>
-      <h2 style="margin-top:0.8rem;">
-        We are not translating India for anyone.
-        <em>We are just bringing what works.</em>
-      </h2>
+<!-- ============ 3. INGREDIENT ORIGINS ============ -->
+<section class="section" id="origins">
+  <div class="wrap">
+    <div class="origins-head">
+      <p class="eyebrow">Where it comes from</p>
+      <h2 class="h-section">Named for what it is, and where it grows.</h2>
+      <p class="lede">We won't blend India's ingredients into "exotic botanicals." Each one is named, with the place it comes from.</p>
     </div>
-    <div>
-      <p class="promise-note">
-        Three friends. Three countries. One idea: take the botanicals we
-        already trust and put them into body care built for the life we
-        have in North America.
-      </p>
-      <p class="promise-note">
-        Short ingredient lists. Formulas we can explain in full. Nothing in
-        the jar that is only there to make the label look better.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ materials ============ -->
-<section class="band band--sage" id="materials">
-  <div class="wrap center band-head">
-    <p class="eyebrow">The materials</p>
-    <h2 class="h-section" style="margin-top:0.7rem;">Rooted in India. Made for now.</h2>
-    <div class="rule-diamond"><i></i></div>
-  </div>
-
-  <div class="wrap materials">
-
-    <article class="mat">
-      <svg viewBox="0 0 110 130" role="img" aria-label="Kokum fruit">
-        <path d="M55 34c6-16 22-22 34-18-6 16-21 22-34 18z" fill="#2E5C3C"/>
-        <path d="M55 34c-6-14-20-19-31-15 6 14 19 19 31 15z" fill="#17362A"/>
-        <circle cx="42" cy="70" r="26" fill="#5E1F2C"/>
-        <circle cx="34" cy="61" r="8" fill="#8A3444" opacity=".5"/>
-        <circle cx="76" cy="88" r="24" fill="#4E1824"/>
-        <circle cx="76" cy="88" r="15" fill="#F3EBDA"/>
-        <g fill="#E0D0B2">
-          <ellipse cx="70" cy="83" rx="5.5" ry="6.5"/><ellipse cx="82" cy="83" rx="5.5" ry="6.5"/>
-          <ellipse cx="70" cy="94" rx="5.5" ry="6.5"/><ellipse cx="82" cy="94" rx="5.5" ry="6.5"/>
-        </g>
-        <circle cx="30" cy="98" r="18" fill="#6B2737"/>
-      </svg>
-      <div>
+    <div class="origins">
+      <article class="origin">
+        <div class="deva" lang="mr">कोकम</div>
         <h3>Kokum</h3>
-        <p class="deva" lang="hi">कोकम</p>
-        <p>Pressed from the seed of <em>Garcinia indica</em>, grown along the
-          Konkan coast. Hard as wax in the tin, oil the second it touches skin.</p>
-        <a class="link-arrow" href="products.html">Learn more &rarr;</a>
-      </div>
-    </article>
-
-    <article class="mat">
-      <svg viewBox="0 0 110 130" role="img" aria-label="Coffee cherries and bean">
-        <path d="M56 30c10-14 28-16 38-9-9 14-27 17-38 9z" fill="#2E5C3C"/>
-        <path d="M50 44c-10-12-28-13-37-5 9 12 26 15 37 5z" fill="#17362A"/>
-        <path d="M54 26v76" stroke="#3E6B47" stroke-width="3" fill="none"/>
-        <circle cx="36" cy="76" r="19" fill="#7E1F2A"/>
-        <circle cx="30" cy="69" r="6" fill="#A83A44" opacity=".5"/>
-        <circle cx="72" cy="66" r="16" fill="#5E1620"/>
-        <g transform="translate(60 106) rotate(-16)">
-          <ellipse rx="24" ry="16" fill="#3A2416"/>
-          <path d="M-24 0a24 9 0 0048 0a24 9 0 00-48 0" fill="#5A3A1C"/>
-        </g>
-      </svg>
-      <div>
-        <h3>Coffee</h3>
-        <p class="deva" lang="hi">कॉफ़ी</p>
-        <p>Shade grown under pepper and cardamom above Coorg and Chikmagalur.
-          Ground coarse, for grip as much as for the smell.</p>
-        <a class="link-arrow" href="products.html">Learn more &rarr;</a>
-      </div>
-    </article>
-
-    <article class="mat">
-      <svg viewBox="0 0 110 130" role="img" aria-label="Rice bran">
-        <path d="M55 18c14 10 20 30 14 48-14-10-21-30-14-48z" fill="#C9A94E"/>
-        <path d="M55 42c14 10 20 30 14 48-14-10-21-30-14-48z" fill="#B08D3F"/>
-        <path d="M55 18c-14 10-20 30-14 48 14-10 21-30 14-48z" fill="#DDC078"/>
-        <path d="M55 42c-14 10-20 30-14 48 14-10 21-30 14-48z" fill="#C9A94E"/>
-        <path d="M55 18v96" stroke="#8A6C2A" stroke-width="2.5" fill="none"/>
-        <ellipse cx="55" cy="118" rx="20" ry="6" fill="#17362A" opacity=".14"/>
-      </svg>
-      <div>
-        <h3>Rice bran</h3>
-        <p class="deva" lang="hi">चावल की भूसी</p>
-        <p>The light, stable oil that carries the butter. Slower to turn than
-          most plant oils, which is why the balm keeps.</p>
-        <a class="link-arrow" href="products.html">Learn more &rarr;</a>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<!-- ============ launch collection ============ -->
-<section class="band band--cream2">
-  <div class="wrap center band-head">
-    <p class="eyebrow">Launch collection</p>
-    <h2 class="h-section" style="margin-top:0.7rem;">Two things. Done properly.</h2>
-    <div class="rule-diamond"><i></i></div>
-  </div>
-
-  <div class="wrap grid-2">
-
-    <article class="pcard">
-      <div class="pcard-art">
-        <svg viewBox="0 0 200 230" role="img" aria-label="Kokum balm jar">
-          <defs>
-            <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0.4">
-              <stop offset="0" stop-color="#6E4420"/><stop offset=".3" stop-color="#A8722F"/>
-              <stop offset=".6" stop-color="#8A5A26"/><stop offset="1" stop-color="#5C3618"/></linearGradient>
-            <linearGradient id="gd2" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0" stop-color="#8A6C2A"/><stop offset=".32" stop-color="#E3C98A"/>
-              <stop offset=".62" stop-color="#B08D3F"/><stop offset="1" stop-color="#7E621F"/></linearGradient>
-          </defs>
-          <ellipse cx="100" cy="214" rx="72" ry="10" fill="#17362A" opacity=".16"/>
-          <rect x="36" y="72" width="128" height="142" rx="9" fill="url(#g2)"/>
-          <rect x="48" y="80" width="15" height="126" rx="7" fill="#fff" opacity=".16"/>
-          <rect x="30" y="38" width="140" height="34" rx="5" fill="url(#gd2)"/>
-          <rect x="30" y="66" width="140" height="7" rx="3" fill="#6E5518" opacity=".5"/>
-          <rect x="50" y="94" width="100" height="96" rx="2" fill="#FAF4E8"/>
-          <image href="logo.png" x="72" y="102" width="56" height="36" preserveAspectRatio="xMidYMid meet"/>
-          <text x="100" y="158" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="8" letter-spacing="1.2" fill="#1E3428">KOKUM BUTTER</text>
-          <text x="100" y="169" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="8" letter-spacing="1.2" fill="#1E3428">ELBOW &amp; HEEL BALM</text>
-          <text x="100" y="182" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="6" letter-spacing="0.9" fill="#B08D3F">3.5 OZ | 100 g</text>
-        </svg>
-      </div>
-      <div>
-        <h3>Kokum Butter<br>Elbow &amp; Heel Balm</h3>
-        <p class="desc">
-          A solid balm for heels that split and elbows that stay rough no
-          matter what lotion you use. Melts on contact, stays where you put it.
-        </p>
-        <p class="size">3.5 oz &middot; 100 g</p>
-        <!-- SWAP: final price -->
-        <p class="price">$22.00</p>
-        <a class="btn btn--sm" href="products.html">Shop now</a>
-      </div>
-    </article>
-
-    <article class="pcard">
-      <div class="pcard-art">
-        <svg viewBox="0 0 200 230" role="img" aria-label="Coffee and salt scrub jar">
-          <defs>
-            <linearGradient id="g3" x1="0" y1="0" x2="1" y2="0.4">
-              <stop offset="0" stop-color="#6E4420"/><stop offset=".3" stop-color="#A8722F"/>
-              <stop offset=".6" stop-color="#8A5A26"/><stop offset="1" stop-color="#5C3618"/></linearGradient>
-            <linearGradient id="dl2" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0" stop-color="#221610"/><stop offset=".35" stop-color="#4A3324"/>
-              <stop offset=".7" stop-color="#2C1D14"/><stop offset="1" stop-color="#1A110B"/></linearGradient>
-          </defs>
-          <ellipse cx="100" cy="214" rx="74" ry="10" fill="#17362A" opacity=".16"/>
-          <rect x="34" y="76" width="132" height="138" rx="9" fill="url(#g3)"/>
-          <rect x="46" y="84" width="16" height="122" rx="8" fill="#fff" opacity=".14"/>
-          <rect x="28" y="42" width="144" height="36" rx="5" fill="url(#dl2)"/>
-          <g fill="#3A2416">
-            <ellipse cx="60" cy="44" rx="12" ry="7"/><ellipse cx="92" cy="39" rx="14" ry="8"/>
-            <ellipse cx="126" cy="42" rx="13" ry="7"/><ellipse cx="152" cy="46" rx="11" ry="6"/>
-          </g>
-          <g fill="#FAF4E8" opacity=".85"><circle cx="76" cy="42" r="2.4"/><circle cx="112" cy="38" r="2"/><circle cx="142" cy="44" r="2.2"/></g>
-          <rect x="48" y="98" width="104" height="94" rx="2" fill="#FAF4E8"/>
-          <image href="logo.png" x="72" y="106" width="56" height="36" preserveAspectRatio="xMidYMid meet"/>
-          <text x="100" y="164" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="8" letter-spacing="1.2" fill="#1E3428">COFFEE &amp; SALT SCRUB</text>
-          <text x="100" y="177" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="6" letter-spacing="0.9" fill="#B08D3F">8.8 OZ | 250 g</text>
-        </svg>
-      </div>
-      <div>
-        <h3>Coffee &amp; Salt<br>Body Scrub</h3>
-        <p class="desc">
-          Coarse Indian arabica and salt in an oil base that emulsifies with
-          water. Rinses clean instead of leaving a slick down the bath.
-        </p>
-        <p class="size">8.8 oz &middot; 250 g</p>
-        <p class="price">$26.00</p>
-        <a class="btn btn--sm" href="products.html">Shop now</a>
-      </div>
-    </article>
-
-  </div>
-
-  <div class="wrap trust trust--wide" style="grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));margin-top:clamp(2.5rem,5vw,4rem);">
-    <div>
-      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M6 26c0-9 6-15 20-16-2 11-9 16-20 16z"/><path d="M6 26c3-5 7-8 12-10"/></svg>
-      <span>Thoughtfully sourced</span>
-    </div>
-    <div>
-      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M13 4h6M14 4v8l-6 12a2.5 2.5 0 002.2 3.6h11.6A2.5 2.5 0 0030 24l-6-12V4"/><path d="M10 20h12"/></svg>
-      <span>Short ingredient lists</span>
-    </div>
-    <div>
-      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M16 27S5 20.5 5 13.2A6 6 0 0116 10a6 6 0 0111 3.2C27 20.5 16 27 16 27z"/></svg>
-      <span>Made with care</span>
-    </div>
-    <div>
-      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M16 4c5 0 9 3.6 9 8.4C25 19 16 28 16 28S7 19 7 12.4C7 7.6 11 4 16 4z"/><circle cx="16" cy="12.5" r="3"/></svg>
-      <span>Made in India</span>
+        <p class="where">Konkan coast, western India</p>
+        <p>The kokum tree grows in one narrow strip of India's west coast and the hills above it. Its fruit flavours Konkani curries and summer drinks. Its seed is pressed into a firm butter that melts the moment it meets skin. On a coast where the dry season splits heels, that butter has long been the thing people reach for.</p>
+      </article>
+      <article class="origin cinnamon">
+        <div class="deva" lang="hi">दालचिनी</div>
+        <h3>Cinnamon</h3>
+        <p class="where">Malabar coast, southwestern India</p>
+        <p>Dalchini sits in almost every Indian spice box. We use oil from the cinnamon leaf, which is gentler on skin than oil from the bark, and we keep it at a low level. It's there for the warm scent when you open the jar.</p>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ============ journal ============ -->
-<section class="band">
-  <div class="wrap center band-head">
-    <p class="eyebrow">Journal</p>
-    <h2 class="h-section" style="margin-top:0.7rem;">Notes from the journey</h2>
-    <div class="rule-diamond"><i></i></div>
-  </div>
-
-  <div class="wrap journal">
-
-    <!-- SWAP: real posts and dates. Delete this section entirely if the
-         journal is not going to be maintained — an empty blog reads worse
-         than no blog. -->
-    <article class="jcard">
-      <svg class="jcard-art" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Kokum fruit in hands">
-        <rect width="320" height="200" fill="#2E4633"/>
-        <path d="M0 150c60-30 120-10 180-40s100-20 140-40v130H0z" fill="#3C5A41"/>
-        <circle cx="120" cy="112" r="30" fill="#5E1F2C"/><circle cx="112" cy="102" r="9" fill="#8A3444" opacity=".5"/>
-        <circle cx="176" cy="128" r="26" fill="#4E1824"/>
-        <circle cx="212" cy="100" r="22" fill="#6B2737"/>
-        <circle cx="152" cy="76" r="18" fill="#7E2C3C"/>
-      </svg>
-      <div class="jcard-body">
-        <p class="date">Coming soon</p>
-        <h3>Kokum: the butter that does the work</h3>
-        <a class="link-arrow" href="#">Read more &rarr;</a>
-      </div>
-    </article>
-
-    <article class="jcard">
-      <svg class="jcard-art" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Coffee estate">
-        <rect width="320" height="200" fill="#1F3A2A"/>
-        <path d="M0 120c50 20 90-10 150 0s110 40 170 20v60H0z" fill="#2C4E36"/>
-        <g stroke="#4A7A52" stroke-width="3" fill="none">
-          <path d="M60 190V96M60 120c-18-8-26-24-24-38 16 2 26 16 24 38zM60 132c18-8 26-24 24-38-16 2-26 16-24 38z"/>
-          <path d="M250 190v-84M250 128c-16-8-22-22-20-34 14 2 22 14 20 34z"/>
-        </g>
-        <circle cx="140" cy="140" r="16" fill="#7E1F2A"/><circle cx="176" cy="152" r="13" fill="#5E1620"/>
-        <circle cx="112" cy="158" r="11" fill="#8A2733"/>
-      </svg>
-      <div class="jcard-body">
-        <p class="date">Coming soon</p>
-        <h3>Why Indian arabica grows under pepper vines</h3>
-        <a class="link-arrow" href="#">Read more &rarr;</a>
-      </div>
-    </article>
-
-    <article class="jcard">
-      <svg class="jcard-art" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Coffee beans and salt">
-        <rect width="320" height="200" fill="#2A1A11"/>
-        <g fill="#3A2416">
-          <g transform="translate(80 90) rotate(20)"><ellipse rx="34" ry="23"/><path d="M-34 0a34 13 0 0068 0a34 13 0 00-68 0" fill="#5A3A1C"/></g>
-          <g transform="translate(190 130) rotate(-16)"><ellipse rx="30" ry="20"/><path d="M-30 0a30 11 0 0060 0a30 11 0 00-60 0" fill="#5A3A1C"/></g>
-          <g transform="translate(262 66) rotate(34)"><ellipse rx="28" ry="19"/><path d="M-28 0a28 10 0 0056 0a28 10 0 00-56 0" fill="#5A3A1C"/></g>
-        </g>
-        <g fill="#FFFDF6">
-          <rect x="140" y="52" width="20" height="17" rx="3" transform="rotate(-16 150 60)"/>
-          <rect x="230" y="150" width="17" height="15" rx="3" transform="rotate(22 238 157)"/>
-          <rect x="46" y="160" width="15" height="13" rx="3" transform="rotate(8 53 166)"/>
-        </g>
-      </svg>
-      <div class="jcard-body">
-        <p class="date">Coming soon</p>
-        <h3>Why a scrub should rinse clean</h3>
-        <a class="link-arrow" href="#">Read more &rarr;</a>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<!-- ============ newsletter ============ -->
-<section class="band band--forest">
-  <div class="promise-grid">
-    <div>
-      <h2 class="h-section">Be the first to know.</h2>
-      <p style="margin-top:0.8rem;">
-        Small first run. The list hears before anyone else, and gets it at a
-        price we will not repeat.
-      </p>
+<!-- ============ 4. COMING NEXT + FOUNDERS ============ -->
+<section class="section band-sand">
+  <div class="wrap split">
+    <div class="panel panel-sage">
+      <p class="eyebrow">Coming next</p>
+      <h2>Moringa Seed Oil</h2>
+      <p>100% virgin, cold-pressed moringa seed oil for a light, dry-feeling body oil. Subscribers hear first and can ask for samples.</p>
+      <a class="btn btn-ghost" href="#join">Get first access</a>
     </div>
-    <div>
-      <form class="signup" name="waitlist" method="POST" data-netlify="true" netlify-honeypot="company">
-        <input type="hidden" name="form-name" value="waitlist">
-        <p class="hp"><label>Leave this empty <input name="company" tabindex="-1" autocomplete="off"></label></p>
-        <div class="field-row">
-          <label for="email" class="sr-only">Email address</label>
-          <input id="email" type="email" name="email" required placeholder="Enter your email" autocomplete="email">
-          <button class="btn btn--brass" type="submit">Join the list</button>
-        </div>
-        <p class="fineprint">No more than one email a month.</p>
-        <div class="done" role="status">
-          <p>You&rsquo;re on the list.</p>
-          <p>We&rsquo;ll write when there is something worth writing about.</p>
-        </div>
-      </form>
+    <div class="panel panel-paper">
+      <p class="eyebrow">Who we are</p>
+      <h2>Three friends from Mumbai, not chemists.</h2>
+      <p>Gaurav, Pratik and Rahul grew up with these ingredients and couldn't find them made well here. We test every sample on our own skin first, and we tell you when we change a formula.</p>
+      <a class="btn btn-ghost" href="story.html">Read our story</a>
     </div>
   </div>
 </section>
 
-<!-- ============ footer ============ -->
-<footer class="foot">
-  <div class="foot-grid">
+<!-- ============ 5. JOIN THE LIST (Netlify form "join") ============ -->
+<section class="section band-forest" id="join">
+  <div class="wrap join">
     <div>
-      <img src="logo-light.png" alt="Indus &amp; Ivy" width="170">
-    </div>
-    <div>
-      <h4>Shop</h4>
+      <p class="eyebrow">Join Indus &amp; Ivy</p>
+      <h2 class="h-section">Be first when the balm lands on Amazon.</h2>
+      <p>One short email at launch, then founder notes when there's something real to share.</p>
       <ul>
-        <li><a href="products.html">Kokum Balm</a></li>
-        <li><a href="products.html">Coffee &amp; Salt Scrub</a></li>
-        <li><a href="products.html">All products</a></li>
+        <li>Launch-day link and launch-only pricing</li>
+        <li>First access to new products, including Moringa Seed Oil</li>
       </ul>
     </div>
-    <div>
-      <h4>Company</h4>
-      <ul>
-        <li><a href="story.html">Our story</a></li>
-        <li><a href="products.html#materials">Ingredients</a></li>
-        <li><a href="index.html#journal">Journal</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Help</h4>
-      <ul>
-        <li><a href="contact.html">FAQ</a></li>
-        <li><a href="contact.html">Shipping &amp; returns</a></li>
-        <li><a href="contact.html">Contact us</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Follow us</h4>
-      <div class="social">
-        <a href="https://instagram.com/indusandivyofficial" rel="noopener" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-        </a>
-        <a href="https://x.com/IndusandIvy" rel="noopener" aria-label="X">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3h3l-6.6 7.6L21.8 21h-6l-4.3-5.6L6.5 21h-3l7-8.1L2.5 3h6.1l3.9 5.2L17.5 3zm-1.1 16.2h1.7L7.7 4.7H5.9l10.5 14.5z"/></svg>
-        </a>
-        <a href="https://pinterest.com" rel="noopener" aria-label="Pinterest">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-3.6 19.3c-.1-.8-.2-2 0-2.9l1.2-5s-.3-.6-.3-1.5c0-1.4.8-2.5 1.8-2.5.9 0 1.3.6 1.3 1.4 0 .9-.5 2.2-.8 3.4-.3 1 .5 1.9 1.5 1.9 1.8 0 3.2-1.9 3.2-4.7 0-2.5-1.8-4.2-4.3-4.2-2.9 0-4.6 2.2-4.6 4.4 0 .9.3 1.8.8 2.3.1.1.1.2.1.3l-.3 1.1c0 .2-.1.2-.3.1-1.3-.6-2.1-2.5-2.1-4 0-3.2 2.4-6.2 6.8-6.2 3.6 0 6.4 2.6 6.4 6 0 3.6-2.2 6.4-5.4 6.4-1.1 0-2.1-.6-2.4-1.2l-.7 2.5c-.2.9-.8 2.1-1.2 2.8A10 10 0 1012 2z"/></svg>
-        </a>
+
+    <form class="form signup" name="join" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="company">
+      <input type="hidden" name="form-name" value="join">
+      <p class="hidden-field"><label>Leave this empty: <input name="company"></label></p>
+
+      <div class="field"><label for="join-first">First name</label><input id="join-first" name="first_name" autocomplete="given-name" required></div>
+      <div class="field"><label for="join-last">Last name</label><input id="join-last" name="last_name" autocomplete="family-name" required></div>
+      <div class="field full"><label for="join-email">Email</label><input id="join-email" name="email" type="email" autocomplete="email" required></div>
+
+      <fieldset>
+        <legend>Which products interest you? (optional)</legend>
+        <label class="check"><input type="checkbox" id="int-kokum" name="interest" value="Kokum Butter Balm"> Kokum Butter Balm</label>
+        <label class="check"><input type="checkbox" id="int-moringa" name="interest" value="Moringa Seed Oil"> Moringa Seed Oil</label>
+        <label class="check"><input type="checkbox" id="int-future" name="interest" value="Future launches"> Future launches</label>
+      </fieldset>
+
+      <label class="check consent"><input type="checkbox" id="join-consent" name="consent" value="yes" required> <span>Yes, email me about Indus &amp; Ivy. I can unsubscribe anytime. <a href="privacy.html">Privacy Policy</a></span></label>
+
+      <div class="actions"><button class="btn btn-brass" type="submit">Join the list</button></div>
+      <p class="form-done" role="status">You're on the list. Watch your inbox on launch day.</p>
+      <p class="form-error" role="alert">That didn't go through. Check your connection and try again, or email getintouch@indusandivy.com.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER (same on every page) ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <img src="assets/logo-light.png" alt="Indus &amp; Ivy" width="144" height="91">
+        <p style="margin-top:1rem;max-width:18rem">Body care built around single, traceable ingredients from India.</p>
+      </div>
+      <div>
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="products.html">Kokum Butter Balm</a></li>
+          <li><a href="products.html#moringa">Moringa Seed Oil (soon)</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="story.html">Our Story</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="contact.html#faq">FAQs</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Get in touch</h3>
+        <ul>
+          <li>getintouch@indusandivy.com</li>
+          <li>Indus and Ivy, LLC<br>Dallas, Texas 75204</li>
+          <li><a href="#join">Join the list</a></li>
+        </ul>
       </div>
     </div>
-  </div>
-  <div class="foot-base">
-    <span>&copy; 2026 Indus &amp; Ivy. All rights reserved.</span>
-    <span><a href="contact.html">Privacy policy</a> &nbsp;&middot;&nbsp; <a href="contact.html">Terms of service</a></span>
+    <div class="legal">
+      <span>© 2026 Indus and Ivy, LLC. Made in India.</span>
+      <span>Not tested on animals. Contains beeswax.</span>
+    </div>
   </div>
 </footer>
 
-<script src="site.js"></script>
+<script src="js/site.js"></script>
 </body>
 </html>
