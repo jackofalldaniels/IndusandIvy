@@ -36,3 +36,7 @@ Never: heals, treats, repairs, prevents, cures. "Inspired by Ayurveda" is fine; 
 ## Going back to the old site
 
 The site before the redesign is saved as the git tag `v1-original` and the branch `legacy-site`. Redesign work happens on the `redesign` branch and only goes live when merged into `main`.
+
+## Publishing
+
+Changes are made on the `redesign` branch and previewed first. Pushing to `main` publishes: Netlify deploys indusandivy.com automatically on every push to `main`.
