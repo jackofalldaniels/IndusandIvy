@@ -18,3 +18,9 @@
   [headers.values]
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Old product URL now lives at /kokum-butter-balm.html
+[[redirects]]
+  from = "/products.html"
+  to = "/kokum-butter-balm.html"
+  status = 301

@@ -113,4 +113,92 @@
       });
     });
   });
+
+  /* 7. Shop dropdown (click for touch + keyboard; hover handled in CSS) */
+  document.querySelectorAll('.ii-dd').forEach(function (dd) {
+    var btn = dd.querySelector('.ii-dd-btn');
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var open = dd.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.addEventListener('click', function (e) {
+      if (!dd.contains(e.target)) { dd.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }
+    });
+  });
+
+  /* 8. Join the list pop-up
+     Opens from any [data-join] element (add data-interest="Moringa Body Oil Mist" to pre-tick a box).
+     Also opens once per visitor after 20s or half-way down the page. */
+  var modal = document.getElementById('join-modal');
+  if (modal) {
+    var lastFocus = null;
+    var KEY = 'ii-join-seen';
+    var store = {
+      get: function () { try { return localStorage.getItem(KEY); } catch (e) { return '1'; } },
+      set: function () { try { localStorage.setItem(KEY, '1'); } catch (e) {} }
+    };
+    var openModal = function (interest) {
+      if (!modal.hidden) return;
+      lastFocus = document.activeElement;
+      if (drawer && drawer.classList.contains('is-open')) setMenu(false);
+      modal.hidden = false;
+      body.classList.add('modal-open');
+      if (interest) {
+        modal.querySelectorAll('input[name="interest"]').forEach(function (c) { if (c.value === interest) c.checked = true; });
+      }
+      var first = modal.querySelector('input:not([type=hidden]):not([name=company])');
+      setTimeout(function () { if (first) first.focus(); }, 50);
+      store.set();
+    };
+    var closeModal = function () {
+      modal.hidden = true;
+      body.classList.remove('modal-open');
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    };
+    document.addEventListener('click', function (e) {
+      var t = e.target.closest('[data-join]');
+      if (t) { e.preventDefault(); openModal(t.getAttribute('data-interest')); return; }
+      if (e.target.closest('[data-close]')) closeModal();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (modal.hidden) return;
+      if (e.key === 'Escape') closeModal();
+      if (e.key === 'Tab') { /* keep focus inside */
+        var f = modal.querySelectorAll('button, input:not([type=hidden]):not([name=company]), a[href]');
+        var a = f[0], z = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === a) { e.preventDefault(); z.focus(); }
+        else if (!e.shiftKey && document.activeElement === z) { e.preventDefault(); a.focus(); }
+      }
+    });
+    if (location.hash === '#join') openModal();
+    if (!body.hasAttribute('data-no-popup') && !store.get()) {
+      var auto = function () { if (!store.get()) openModal(); cleanup(); };
+      var timer = setTimeout(auto, 20000);
+      var onS = function () {
+        var h = document.documentElement.scrollHeight - window.innerHeight;
+        if (h > 0 && window.scrollY / h > 0.5) auto();
+      };
+      var cleanup = function () { clearTimeout(timer); window.removeEventListener('scroll', onS); };
+      window.addEventListener('scroll', onS, { passive: true });
+    }
+  }
+
+  /* 9. Melt slider on the product page */
+  var melt = document.getElementById('melt-range');
+  if (melt) {
+    var blob = document.querySelector('.melt-blob');
+    var label = document.querySelector('.melt-label');
+    var states = ['Firm in the jar', 'Softening between your fingers', 'Melted into warm skin'];
+    var paint = function () {
+      var v = melt.value / 100;
+      var r1 = 46 + v * 4, r2 = 54 - v * 4, ry = 55 - v * 35, ry2 = 45 + v * 10;
+      blob.style.borderRadius = r1 + '% ' + r2 + '% 50% 50% / ' + ry + '% 50% ' + (50 - v * 30) + '% ' + ry2 + '%';
+      blob.style.transform = 'scaleX(' + (1 + v * 0.55) + ') scaleY(' + (1 - v * 0.62) + ') translateY(' + (v * 70) + '%)';
+      blob.style.filter = 'saturate(' + (1 + v * 0.3) + ') brightness(' + (1 + v * 0.06) + ')';
+      label.textContent = states[v < 0.34 ? 0 : v < 0.67 ? 1 : 2];
+    };
+    melt.addEventListener('input', paint);
+    paint();
+  }
 })();

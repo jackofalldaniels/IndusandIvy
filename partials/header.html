@@ -1,11 +1,16 @@
 <a class="skip" href="#main">Skip to content</a>
-<div class="ii-announce" id="ii-announce">Launching soon on Amazon US<a href="index.html#join">Get launch-day access</a></div>
+<div class="ii-announce" id="ii-announce">Launching soon on Amazon US<button type="button" class="ii-announce-btn" data-join>Get launch-day access</button></div>
 <header class="ii-header" id="ii-header">
   <div class="ii-inner">
     <nav class="ii-nav" aria-label="Shop">
-      <a href="products.html">The Balm</a>
-      <a href="index.html#ingredients">Ingredients</a>
-      <a href="products.html#moringa">Coming Soon</a>
+      <div class="ii-dd">
+        <button type="button" class="ii-dd-btn" aria-expanded="false" aria-controls="ii-shop">Shop</button>
+        <div class="ii-dd-menu" id="ii-shop">
+          <a href="kokum-butter-balm.html">Kokum Butter Balm<small>Available soon on Amazon US</small></a>
+          <a href="moringa-body-oil-mist.html">Moringa Body Oil Mist<small>Coming soon</small></a>
+        </div>
+      </div>
+      <a href="ingredients.html">Ingredients</a>
     </nav>
     <button class="ii-menu" id="ii-menu" aria-expanded="false" aria-controls="ii-drawer"><span></span>Menu</button>
     <a class="ii-brand" href="index.html" aria-label="Indus &amp; Ivy home">
@@ -17,9 +22,9 @@
     <nav class="ii-nav ii-nav-right" aria-label="Company">
       <a href="story.html">Our Story</a>
       <a href="contact.html">Contact</a>
-      <a class="ii-cta" href="index.html#join">Join the list</a>
+      <button type="button" class="ii-cta" data-join>Join the list</button>
     </nav>
-    <a class="ii-bag" href="index.html#join">Join</a>
+    <button type="button" class="ii-bag" data-join>Join</button>
   </div>
 </header>
 <div class="ii-drawer" id="ii-drawer" role="dialog" aria-modal="true" aria-label="Menu">
@@ -29,10 +34,11 @@
   </div>
   <nav aria-label="Mobile">
     <a href="index.html">Home</a>
-    <a href="products.html">The Balm</a>
+    <a href="kokum-butter-balm.html">Kokum Butter Balm</a>
+    <a href="moringa-body-oil-mist.html">Moringa Mist <span class="soon-tag">Soon</span></a>
+    <a href="ingredients.html">Ingredients</a>
     <a href="story.html">Our Story</a>
     <a href="contact.html">Contact</a>
-    <a href="index.html#join">Join the list</a>
   </nav>
-  <p>Kokum Butter Balm. Launching soon on Amazon US.</p>
+  <button type="button" class="btn btn-light" data-join>Join the list</button>
 </div>
