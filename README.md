@@ -9,7 +9,8 @@ Plain HTML, CSS and JS, hosted on Netlify. No build step, no frameworks.
 | `index.html` | Home |
 | `kokum-butter-balm.html` | Kokum Butter Balm product page (Shop) |
 | `moringa-body-oil-mist.html` | Moringa Body Oil Mist, coming soon (Shop) |
-| `ingredients.html` | Every ingredient explained |
+| `journal.html` | Journal index |
+| `journal-*.html` | Journal articles (one file each) |
 | `story.html` | Our Story |
 | `contact.html` | Contact form + FAQs |
 | `privacy.html`, `thanks.html`, `404.html` | Utility pages |
@@ -20,6 +21,20 @@ Plain HTML, CSS and JS, hosted on Netlify. No build step, no frameworks.
 | `assets/` | Logos and icons |
 | `images/` | Website photography (see below) |
 | `sitemap.xml`, `robots.txt` | For Google. Add new pages to `sitemap.xml`. |
+
+## Adding a Journal article
+
+1. Copy an existing `journal-*.html` file and rename it (e.g. `journal-what-is-moringa.html`).
+2. Change the `<title>`, description, headline, intro, body text, image and sources.
+3. Add a card for it on `journal.html` (copy one of the existing `j-card` blocks).
+4. Add the new page to `sitemap.xml`.
+5. Follow the copy rules below, and list your sources at the bottom of every article.
+
+## Launch day: Shop on Amazon
+
+- `partials/header.html`: replace the "Join the list" button with the "Shop on Amazon" link in the comment above it, update the announcement bar, then run `python3 tools/update-chrome.py`.
+- `kokum-butter-balm.html`: replace the "Get launch-day access" button with the "Buy on Amazon" link in the comment above it.
+- Tag every Amazon link with Amazon Attribution.
 
 ## Join the list pop-up
 

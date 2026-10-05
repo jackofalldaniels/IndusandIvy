@@ -736,3 +736,89 @@ body.modal-open { overflow: hidden; }
 .founder .full { font-size: .9rem; color: var(--ink-soft); }
 @media (max-width: 700px) { .facts-strip li + li::before { display: none; } .facts-strip ul { gap: .35rem 1.4rem; } }
 .ii-footer { border-top: 1px solid var(--line-light); }
+
+/* =========================================================
+   v3: Journal, product ingredient detail, legal pages
+   ========================================================= */
+.ii-cta-gold { background: var(--gold) !important; border-color: var(--gold) !important; color: #fff !important; text-decoration: none; }
+
+/* Journal cards */
+.journal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.25rem, 3vw, 2.5rem); }
+.j-card { text-decoration: none; display: flex; flex-direction: column; background: var(--cream); transition: transform .5s var(--ease), box-shadow .5s var(--ease); }
+.j-card:hover { transform: translateY(-4px); box-shadow: 0 24px 50px -30px rgba(27,42,30,.45); }
+.j-card .img { aspect-ratio: 4 / 3; overflow: hidden; }
+.j-card .img img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.4s var(--ease); }
+.j-card:hover .img img { transform: scale(1.05); }
+.j-card .copy { padding: clamp(1.3rem, 2.5vw, 1.9rem); display: flex; flex-direction: column; flex: 1; }
+.j-card .meta { font-size: .66rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); }
+.j-card h3 { font-family: var(--serif); font-size: 1.65rem; line-height: 1.2; margin-top: .6rem; }
+.j-card p { color: var(--ink-soft); font-size: .93rem; margin-top: .7rem; flex: 1; }
+.j-card .link-arrow { margin-top: 1.2rem; align-self: flex-start; font-size: .66rem; }
+.j-feature { display: grid; grid-template-columns: 1.2fr 1fr; background: var(--cream); text-decoration: none; margin-bottom: clamp(1.5rem, 3vw, 2.5rem); }
+.j-feature .img { overflow: hidden; min-height: 380px; }
+.j-feature .img img { width: 100%; height: 100%; object-fit: cover; }
+.j-feature .copy { padding: clamp(2rem, 5vw, 4rem); display: flex; flex-direction: column; justify-content: center; }
+.j-feature h2 { font-family: var(--serif); font-size: clamp(2rem, 3.4vw, 3rem); line-height: 1.1; margin-top: .8rem; }
+.j-feature p { color: var(--ink-soft); margin-top: 1rem; }
+@media (max-width: 900px) { .journal-grid { grid-template-columns: 1fr; } .j-feature { grid-template-columns: 1fr; } .j-feature .img { min-height: 260px; } }
+
+/* Article */
+.article-head { padding: clamp(3.5rem, 8vw, 6rem) 0 clamp(2rem, 4vw, 3rem); text-align: center; }
+.article-head .h1 { max-width: 20ch; margin: 1.1rem auto 0; }
+.article-head .dek { font-size: clamp(1.05rem, 1.4vw, 1.25rem); color: var(--ink-soft); max-width: 40rem; margin: 1.4rem auto 0; line-height: 1.7; }
+.article-head .byline { margin-top: 1.6rem; font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-soft); }
+.article-hero { max-width: 1100px; margin: 0 auto; padding: 0 var(--gutter); }
+.article-hero img { width: 100%; aspect-ratio: 16 / 8; object-fit: cover; }
+.article { max-width: 44rem; margin: 0 auto; padding: clamp(2.5rem, 6vw, 4.5rem) var(--gutter) 0; }
+.article p, .article li { font-size: 1.08rem; line-height: 1.85; color: #34413a; }
+.article p + p { margin-top: 1.3rem; }
+.article h2 { font-family: var(--serif); font-size: clamp(1.8rem, 2.8vw, 2.4rem); line-height: 1.15; margin: 3rem 0 1rem; color: var(--ink); }
+.article h3 { font-family: var(--sans); font-size: .74rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin: 2rem 0 .6rem; font-weight: 500; }
+.article ul, .article ol { padding-left: 1.3rem; margin: 1rem 0; }
+.article li + li { margin-top: .5rem; }
+.article strong { color: var(--ink); font-weight: 500; }
+.article a { color: var(--forest); text-decoration-color: var(--gold); text-underline-offset: 3px; }
+.article .lead::first-letter { font-family: var(--serif); float: left; font-size: 4.4rem; line-height: .85; padding: .35rem .7rem 0 0; color: var(--gold); }
+.pull { font-family: var(--serif); font-style: italic; font-size: clamp(1.5rem, 2.4vw, 2rem); line-height: 1.35; color: var(--ink); border-left: 2px solid var(--gold); padding: .2rem 0 .2rem 1.4rem; margin: 2.4rem 0; }
+.compare { width: 100%; border-collapse: collapse; margin: 1.6rem 0; font-size: .95rem; }
+.compare th, .compare td { text-align: left; padding: .9rem .8rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+.compare th { font-size: .66rem; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); font-weight: 500; }
+.compare td:first-child { font-weight: 500; color: var(--ink); width: 28%; }
+.article-cta { background: var(--forest); color: var(--on-dark); padding: clamp(1.8rem, 4vw, 2.6rem); margin: 3rem 0 0; display: grid; grid-template-columns: 120px 1fr; gap: 1.6rem; align-items: center; }
+.article-cta img { width: 120px; aspect-ratio: 4 / 5; object-fit: cover; }
+.article-cta h3 { margin: 0 0 .4rem; color: var(--gold-soft); }
+.article-cta p { color: var(--on-dark-soft) !important; font-size: .98rem !important; }
+.article-cta .btn { margin-top: 1rem; }
+@media (max-width: 560px) { .article-cta { grid-template-columns: 1fr; } }
+.sources { margin-top: 3rem; padding-top: 1.6rem; border-top: 1px solid var(--line); }
+.sources h3 { margin-top: 0; }
+.sources li, .sources p { font-size: .88rem !important; color: var(--ink-soft) !important; line-height: 1.6 !important; }
+.disclaimer { font-size: .85rem !important; color: var(--ink-soft) !important; font-style: italic; margin-top: 1.4rem; }
+
+/* Product: detailed ingredient list on dark band */
+.inci-detail { list-style: none; padding: 0; counter-reset: i; }
+.inci-detail li { counter-increment: i; display: grid; grid-template-columns: 3rem 1fr; gap: .2rem 1rem; padding: 1.5rem 0; border-top: 1px solid var(--line-light); }
+.inci-detail li:last-child { border-bottom: 1px solid var(--line-light); }
+.inci-detail li::before { content: counter(i, decimal-leading-zero); grid-row: span 3; font-family: var(--serif); font-style: italic; font-size: 1.2rem; color: var(--gold-soft); line-height: 1.5; }
+.inci-detail .name { font-family: var(--serif); font-size: 1.55rem; line-height: 1.25; }
+.inci-detail .latin { display: block; font-size: .74rem; letter-spacing: .06em; color: var(--on-dark-soft); margin-top: .1rem; }
+.inci-detail p { color: var(--on-dark-soft); font-size: .93rem; margin-top: .5rem; }
+.inci-detail p b { color: var(--on-dark); font-weight: 500; }
+.inci-detail li.hero-ing .name { color: var(--gold-soft); }
+.leave-out-wrap { margin-top: clamp(3rem, 6vw, 4.5rem); }
+.leave-out-wrap h3 { font-family: var(--serif); font-size: clamp(1.6rem, 2.6vw, 2.2rem); margin-bottom: 1.4rem; }
+
+/* Legal */
+.legal { max-width: 46rem; margin: 0 auto; padding: 0 var(--gutter) var(--section); }
+.legal h2 { font-family: var(--serif); font-size: 1.8rem; margin: 2.6rem 0 .8rem; }
+.legal p, .legal li { color: var(--ink-soft); }
+.legal p + p { margin-top: 1rem; }
+.legal ul { padding-left: 1.2rem; margin: .8rem 0; }
+.legal li + li { margin-top: .4rem; }
+.legal .note { background: var(--sand-deep); padding: 1.2rem 1.4rem; font-size: .9rem; margin-top: 2rem; }
+
+/* FAQ groups */
+.faq-group + .faq-group { margin-top: clamp(2.5rem, 5vw, 3.5rem); }
+.faq-group > h3 { font-size: .7rem; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: .4rem; }
+.inci-detail li > * { grid-column: 2; }
+.inci-detail li::before { grid-row: 1 / span 4; grid-column: 1; }

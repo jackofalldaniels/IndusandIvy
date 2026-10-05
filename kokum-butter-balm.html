@@ -26,7 +26,8 @@
 <div class="ii-announce" id="ii-announce">Launching soon on Amazon US<button type="button" class="ii-announce-btn" data-join>Get launch-day access</button></div>
 <header class="ii-header" id="ii-header">
   <div class="ii-inner">
-    <nav class="ii-nav" aria-label="Shop">
+    <nav class="ii-nav" aria-label="Main">
+      <a href="index.html">Home</a>
       <div class="ii-dd">
         <button type="button" class="ii-dd-btn" aria-expanded="false" aria-controls="ii-shop">Shop</button>
         <div class="ii-dd-menu" id="ii-shop">
@@ -34,7 +35,7 @@
           <a href="moringa-body-oil-mist.html">Moringa Body Oil Mist<small>Coming soon</small></a>
         </div>
       </div>
-      <a href="ingredients.html">Ingredients</a>
+      <a href="journal.html">Journal</a>
     </nav>
     <button class="ii-menu" id="ii-menu" aria-expanded="false" aria-controls="ii-drawer"><span></span>Menu</button>
     <a class="ii-brand" href="index.html" aria-label="Indus &amp; Ivy home">
@@ -46,6 +47,8 @@
     <nav class="ii-nav ii-nav-right" aria-label="Company">
       <a href="story.html">Our Story</a>
       <a href="contact.html">Contact</a>
+      <!-- LAUNCH DAY: replace this button with
+           <a class="ii-cta ii-cta-gold" href="AMAZON-LINK" rel="noopener">Shop on Amazon</a> -->
       <button type="button" class="ii-cta" data-join>Join the list</button>
     </nav>
     <button type="button" class="ii-bag" data-join>Join</button>
@@ -60,7 +63,7 @@
     <a href="index.html">Home</a>
     <a href="kokum-butter-balm.html" aria-current="page">Kokum Butter Balm</a>
     <a href="moringa-body-oil-mist.html">Moringa Mist <span class="soon-tag">Soon</span></a>
-    <a href="ingredients.html">Ingredients</a>
+    <a href="journal.html">Journal</a>
     <a href="story.html">Our Story</a>
     <a href="contact.html">Contact</a>
   </nav>
@@ -121,7 +124,7 @@
   <li ><span class="name">Vitamin E <span class="latin">Tocopherol / Mixed Tocopherols</span></span><span class="role">A small amount that helps keep the oils fresh.</span></li>
   <li ><span class="name">Cinnamon Leaf Oil <span class="latin">Cinnamomum Zeylanicum Leaf Oil</span></span><span class="role">A warm scent, used at a low level.</span></li>
 </ol>
-            <p style="margin-top:1rem"><a class="link-arrow" href="ingredients.html">Why each one is there</a></p>
+            <p style="margin-top:1rem"><a class="link-arrow" href="#ingredients">Why each one is there</a></p>
           </div>
         </details>
         <details>
@@ -190,24 +193,35 @@
   </div>
 </section>
 
-<!-- ============ 5. EVERYTHING IN THE JAR ============ -->
-<section class="section band-forest">
-  <div class="wrap label-grid">
-    <div>
-      <p class="eyebrow reveal">Full ingredient list</p>
-      <h2 class="h2 reveal d1">Everything <em>in the jar.</em></h2>
-      <p class="lede reveal d2">Six ingredients, in label order, heaviest first.</p>
-      <div class="free-from reveal d3"><span>No water</span><span>No preservatives</span><span>No synthetic fragrance</span><span>No colorants</span></div>
-      <p class="reveal d3" style="margin-top:2rem"><a class="link-arrow" href="ingredients.html" style="color:var(--gold-soft)">Read about each ingredient</a></p>
+<!-- ============ 5. EVERYTHING IN THE JAR (full ingredient reference) ============ -->
+<section class="section band-forest" id="ingredients">
+  <div class="wrap">
+    <div class="label-grid">
+      <div>
+        <p class="eyebrow reveal">Full ingredient list</p>
+        <h2 class="h2 reveal d1">Six ingredients. <em>Every one explained.</em></h2>
+        <p class="lede reveal d2">In label order, heaviest first, with what each one is and why it's in the jar.</p>
+        <p class="reveal d3" style="margin-top:2rem"><a class="link-arrow" href="journal-what-is-kokum-butter.html" style="color:var(--gold-soft)">Read: What is kokum butter?</a></p>
+      </div>
+      <ol class="inci-detail">
+      <li class="reveal"><div><span class="name">Rice Bran Oil</span><span class="latin">Oryza Sativa (Rice) Bran Oil</span></div><p><b>What it is:</b> A light oil pressed from the outer layer of the rice grain.</p><p><b>Why it's here:</b> The base of the balm. It sinks in easily and carries the butter across the skin.</p></li>
+      <li class="reveal"><div><span class="name">Caprylic/Capric Triglyceride</span><span class="latin">Derived from coconut</span></div><p><b>What it is:</b> A light, silky oil made from coconut.</p><p><b>Why it's here:</b> Helps the balm glide on without a heavy, greasy feel.</p></li>
+      <li class="reveal hero-ing"><div><span class="name">Kokum Butter</span><span class="latin">Garcinia Indica Seed (Kokum) Butter</span></div><p><b>What it is:</b> A firm butter from the seeds of the kokum fruit, which many Indian families know first from the kitchen.</p><p><b>Why it's here:</b> Solid at room temperature, it softens on contact with warm skin. It softens and conditions dry, rough skin.</p><p><b>Good to know:</b> It isn't cold-pressed. Our supplier uses a process suited to extracting the solid fat from kokum seeds.</p></li>
+      <li class="reveal"><div><span class="name">Beeswax</span><span class="latin">Cera Alba</span></div><p><b>What it is:</b> Natural wax made by honey bees.</p><p><b>Why it's here:</b> Keeps the balm solid in the jar and in place on skin. It's also why the balm isn't vegan.</p></li>
+      <li class="reveal"><div><span class="name">Vitamin E</span><span class="latin">Tocopherol / Mixed Tocopherols</span></div><p><b>What it is:</b> An antioxidant found naturally in plant oils.</p><p><b>Why it's here:</b> A small amount helps keep the oils fresh.</p></li>
+      <li class="reveal"><div><span class="name">Cinnamon Leaf Oil</span><span class="latin">Cinnamomum Zeylanicum Leaf Oil</span></div><p><b>What it is:</b> An essential oil from the leaf of the cinnamon tree.</p><p><b>Why it's here:</b> Gives the balm its warm scent, at a low level.</p><p><b>Good to know:</b> We switched from bark oil to leaf oil after looking at how each behaves on skin.</p></li>
+      </ol>
     </div>
-    <ol class="inci ">
-  <li class="reveal"><span class="name">Rice Bran Oil <span class="latin">Oryza Sativa (Rice) Bran Oil</span></span><span class="role">A light oil that sinks in. The base of the balm.</span></li>
-  <li class="reveal"><span class="name">Caprylic/Capric Triglyceride <span class="latin">From coconut</span></span><span class="role">Helps the balm glide on without a greasy feel.</span></li>
-  <li class="reveal hero-ing"><span class="name">Kokum Butter <span class="latin">Garcinia Indica Seed (Kokum) Butter</span></span><span class="role">A firm seed butter that softens on warm skin. Softens and conditions dry, rough skin.</span></li>
-  <li class="reveal"><span class="name">Beeswax <span class="latin">Cera Alba</span></span><span class="role">Keeps it solid in the jar and in place on skin.</span></li>
-  <li class="reveal"><span class="name">Vitamin E <span class="latin">Tocopherol / Mixed Tocopherols</span></span><span class="role">A small amount that helps keep the oils fresh.</span></li>
-  <li class="reveal"><span class="name">Cinnamon Leaf Oil <span class="latin">Cinnamomum Zeylanicum Leaf Oil</span></span><span class="role">A warm scent, used at a low level.</span></li>
-</ol>
+    <div class="leave-out-wrap">
+      <h3 class="reveal">What we leave out</h3>
+      <div class="leave-out reveal">
+        <div><h3>Water</h3><p>So there's nothing to dilute the butter, and no need for preservatives.</p></div>
+        <div><h3>Preservatives</h3><p>Not needed in a water-free balm.</p></div>
+        <div><h3>Synthetic fragrance</h3><p>The scent comes from cinnamon leaf oil.</p></div>
+        <div><h3>Colorants</h3><p>We took the colorant out. It only changed how the balm looked.</p></div>
+        <div><h3>Film-formers</h3><p>No dimethicone or silicones.</p></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -261,13 +275,14 @@
         <ul>
           <li><a href="kokum-butter-balm.html">Kokum Butter Balm</a></li>
           <li><a href="moringa-body-oil-mist.html">Moringa Body Oil Mist (soon)</a></li>
-          <li><a href="ingredients.html">Ingredients</a></li>
+          <li><a href="kokum-butter-balm.html#ingredients">Ingredients</a></li>
         </ul>
       </div>
       <div>
         <h3>Company</h3>
         <ul>
           <li><a href="story.html">Our Story</a></li>
+          <li><a href="journal.html">Journal</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="contact.html#faq">FAQs</a></li>
           <li><a href="privacy.html">Privacy Policy</a></li>

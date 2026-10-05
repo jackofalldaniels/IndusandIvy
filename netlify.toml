@@ -24,3 +24,8 @@
   from = "/products.html"
   to = "/kokum-butter-balm.html"
   status = 301
+
+[[redirects]]
+  from = "/ingredients.html"
+  to = "/kokum-butter-balm.html#ingredients"
+  status = 301
