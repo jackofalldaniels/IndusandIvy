@@ -1,68 +1,102 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Privacy Policy | Indus &amp; Ivy</title>
+<meta name="description" content="How Indus &amp; Ivy handles your information.">
 <meta name="robots" content="noindex">
+<meta name="theme-color" content="#1B2A1E">
 <link rel="icon" href="assets/favicon.png">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Sans:wght@400;500;600&family=Noto+Serif+Devanagari:wght@400;500&display=swap">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500&family=Noto+Serif+Devanagari:wght@400&display=swap">
 <link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/chrome.css">
 </head>
 <body>
+
 <!-- II:HEADER -->
-<div class="ii-announce">Launching soon on Amazon US. <a href="index.html#join">Get launch-day access</a></div>
-<header class="ii-header">
+<a class="skip" href="#main">Skip to content</a>
+<div class="ii-announce" id="ii-announce">Launching soon on Amazon US<a href="index.html#join">Get launch-day access</a></div>
+<header class="ii-header" id="ii-header">
   <div class="ii-inner">
+    <nav class="ii-nav" aria-label="Shop">
+      <a href="products.html">The Balm</a>
+      <a href="index.html#ingredients">Ingredients</a>
+      <a href="products.html#moringa">Coming Soon</a>
+    </nav>
+    <button class="ii-menu" id="ii-menu" aria-expanded="false" aria-controls="ii-drawer"><span></span>Menu</button>
     <a class="ii-brand" href="index.html" aria-label="Indus &amp; Ivy home">
-      <img class="ii-brand-mark" src="assets/emblem.png" alt="" width="80" height="33">
-      <img class="ii-brand-word" src="assets/wordmark.png" alt="Indus &amp; Ivy" width="190" height="18">
+      <img class="mark dark" src="assets/emblem.png" alt="" width="73" height="30">
+      <img class="mark light" src="assets/emblem-light.png" alt="" width="73" height="30">
+      <img class="word dark" src="assets/wordmark.png" alt="Indus &amp; Ivy" width="141" height="13">
+      <img class="word light" src="assets/wordmark-light.png" alt="" width="141" height="13">
     </a>
-    <button class="ii-menu" id="ii-menu" aria-expanded="false" aria-controls="ii-nav">Menu</button>
-    <nav class="ii-nav" id="ii-nav" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="products.html">Our Products</a>
+    <nav class="ii-nav ii-nav-right" aria-label="Company">
       <a href="story.html">Our Story</a>
-      <a href="contact.html">Contact Us</a>
+      <a href="contact.html">Contact</a>
       <a class="ii-cta" href="index.html#join">Join the list</a>
     </nav>
+    <a class="ii-bag" href="index.html#join">Join</a>
   </div>
 </header>
+<div class="ii-drawer" id="ii-drawer" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="ii-drawer-top">
+    <img src="assets/emblem-light.png" alt="Indus &amp; Ivy" width="63" height="26">
+    <button class="ii-close" id="ii-close">Close</button>
+  </div>
+  <nav aria-label="Mobile">
+    <a href="index.html">Home</a>
+    <a href="products.html">The Balm</a>
+    <a href="story.html">Our Story</a>
+    <a href="contact.html">Contact</a>
+    <a href="index.html#join">Join the list</a>
+  </nav>
+  <p>Kokum Butter Balm. Launching soon on Amazon US.</p>
+</div>
 <!-- /II:HEADER -->
+
+<main id="main">
+
 <!-- PLACEHOLDER: replace with the final Privacy Policy before launch.
      It should cover: what we collect (name, email, product interest, contact messages),
      where it is stored (Netlify Forms), how to unsubscribe or ask for deletion,
-     Amazon orders are handled under Amazon's policy, and a contact email. -->
-<main class="section">
-  <div class="wrap" style="max-width:40rem">
+     that Amazon orders are handled under Amazon's policy, and a contact email. -->
+<section class="page-head">
+  <div class="wrap" style="max-width:46rem">
     <p class="eyebrow">Indus &amp; Ivy</p>
-    <h1 class="h-section" style="margin-top:.5rem">Privacy Policy</h1>
-    <p style="margin-top:1.25rem"><span class="todo">Our full privacy policy is being finalized.</span></p>
-    <p style="margin-top:1rem">In short: we only use your name and email to send the updates you signed up for, and we never sell your information. To be removed from our list, email getintouch@indusandivy.com.</p>
-    <p style="margin-top:2rem"><a class="btn btn-ghost" href="index.html">Back to home</a></p>
+    <h1 class="h1">Privacy Policy</h1>
+    <div class="prose" style="margin-top:2rem">
+      <p>Our full privacy policy is being finalized.</p>
+      <p>In short: we only use your name and email to send the updates you signed up for, and we never sell your information. To be removed from our list, email <a href="mailto:getintouch@indusandivy.com">getintouch@indusandivy.com</a>.</p>
+    </div>
+    <p style="margin-top:2.5rem"><a class="link-arrow" href="index.html">Back to home</a></p>
   </div>
+</section>
+
 </main>
+
 <!-- II:FOOTER -->
 <footer class="ii-footer">
   <div class="ii-inner">
-    <div class="ii-footer-grid">
+    <div class="ii-footer-top">
       <div>
-        <img src="assets/logo-light.png" alt="Indus &amp; Ivy" width="160" height="102">
-        <p>Body care built around traceable ingredients from India.</p>
+        <img src="assets/logo-light.png" alt="Indus &amp; Ivy" width="150" height="96" loading="lazy">
+        <p>Rooted in India. Made for your ritual. Body care built on Indian botanicals, named for what they are and where they grow.</p>
       </div>
       <div>
         <h3>Shop</h3>
         <ul>
           <li><a href="products.html">Kokum Butter Balm</a></li>
-          <li><a href="products.html#moringa">Moringa Seed Oil (soon)</a></li>
+          <li><a href="products.html#moringa">Moringa Body Oil Mist (soon)</a></li>
         </ul>
       </div>
       <div>
         <h3>Company</h3>
         <ul>
           <li><a href="story.html">Our Story</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
           <li><a href="contact.html#faq">FAQs</a></li>
           <li><a href="privacy.html">Privacy Policy</a></li>
         </ul>
@@ -70,19 +104,21 @@
       <div>
         <h3>Get in touch</h3>
         <ul>
-          <li>getintouch@indusandivy.com</li>
+          <li><a href="mailto:getintouch@indusandivy.com">getintouch@indusandivy.com</a></li>
+          <li><a href="https://instagram.com/indusandivyofficial" rel="noopener">Instagram</a></li>
           <li>Indus and Ivy, LLC<br>Dallas, Texas 75204</li>
-          <li><a href="index.html#join">Join the list</a></li>
         </ul>
       </div>
     </div>
+    <div class="ii-footer-word" aria-hidden="true">Indus &amp; Ivy</div>
     <div class="ii-legal">
-      <span>© 2026 Indus and Ivy, LLC. Made in India.</span>
+      <span>&copy; 2026 Indus and Ivy, LLC. Made in India. Designed in the USA.</span>
       <span>Not tested on animals. Contains beeswax.</span>
     </div>
   </div>
 </footer>
 <!-- /II:FOOTER -->
-<script src="js/chrome.js"></script>
+
+<script src="js/main.js"></script>
 </body>
 </html>

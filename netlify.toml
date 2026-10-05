@@ -1,4 +1,20 @@
-# Netlify settings. The site is plain HTML/CSS, so there is no build step.
+# Netlify settings. Plain HTML/CSS, so there is no build step.
 [build]
   publish = "."
   command = ""
+
+# Long cache for images, CSS and JS. File names stay stable, so after replacing an
+# image with the same name, use Netlify's "Clear cache and deploy" if it doesn't update.
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
