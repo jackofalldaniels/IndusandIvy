@@ -822,3 +822,20 @@ body.modal-open { overflow: hidden; }
 .faq-group > h3 { font-size: .7rem; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: .4rem; }
 .inci-detail li > * { grid-column: 2; }
 .inci-detail li::before { grid-row: 1 / span 4; grid-column: 1; }
+
+/* =========================================================
+   v4 fixes (Oct 2026)
+   ========================================================= */
+/* Ingredient teaser cards: on phones, stack the image above the text
+   so the copy can never sit on top of the photo (WebKit/iOS fix). */
+.ing-mini a { overflow: hidden; }
+.ing-mini .copy { position: relative; background: var(--cream); }
+@media (max-width: 600px) {
+  .ing-mini a { display: flex; flex-direction: column; min-height: 0; }
+  .ing-mini img { height: auto; aspect-ratio: 4 / 3; flex: none; }
+}
+
+/* Founder trio cards: names line up on the same baseline even when a
+   city label wraps to two lines. */
+.trio-cards > div { display: flex; flex-direction: column; }
+.trio-cards h3 { margin-top: auto; padding-top: .5rem; }
