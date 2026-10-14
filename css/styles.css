@@ -839,3 +839,16 @@ body.modal-open { overflow: hidden; }
    city label wraps to two lines. */
 .trio-cards > div { display: flex; flex-direction: column; }
 .trio-cards h3 { margin-top: auto; padding-top: .5rem; }
+
+/* Home hero on phones: show the jar on its own, then the text below it
+   on the forest green, so the headline never sits on top of the product. */
+@media (max-width: 760px) {
+  .hero { display: flex; flex-direction: column; align-items: stretch; min-height: 0; }
+  .hero::before, .hero::after { display: none; }
+  .hero-media { position: relative; inset: auto; z-index: 0; aspect-ratio: 4 / 5; overflow: hidden; }
+  .hero-media img { object-position: 50% 22%; }
+  .hero-media::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 35%;
+    background: linear-gradient(0deg, var(--forest) 0%, rgba(27,42,30,0) 100%); }
+  .hero-content { position: relative; z-index: 1; padding-top: 0; margin-top: -2.5rem; padding-bottom: 3.5rem; }
+  .hero-foot { display: none; }
+}
